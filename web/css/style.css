@@ -586,12 +586,11 @@ picture {
   width: 100%;
   height: 72px;
   background: url("../img/linea.svg");
-  background-color: white;
+  background-color: #7ddbe3;
   position: fixed;
   top: 0;
   left: 0;
-  border-radius: 6px;
-  box-shadow: inset 0 0 14px 0.5px; }
+  box-shadow: inset 0 5px 15px -5px rgba(0, 0, 0, 0.45), inset 0 -5px 15px -5px rgba(0, 0, 0, 0.45); }
   #heady:last-child {
     margin-right: 0; }
   #heady #logo {
@@ -600,31 +599,22 @@ picture {
     float: left;
     margin-left: 50px;
     display: table;
-    vertical-align: middle; }
+    vertical-align: middle;
+    opacity: 0.7; }
   #heady nav {
     float: right;
-    line-height: 72px; }
+    line-height: 72px;
+    background-color: transparent; }
     #heady nav a {
       font-size: 18px;
-      color: #E3857D;
+      color: #4d4d4d;
       text-transform: uppercase;
-      margin-right: 40px; }
+      margin-right: 40px;
+      padding: 4px;
+      border-radius: 4px;
+      box-shadow: inset 0 0 10px 1px #E3857D; }
       #heady nav a:last-child {
-        margin-right: 9px; }
-
-.header-bottom {
-  float: left;
-  display: block;
-  margin-right: 2.85714%;
-  width: 100%;
-  display: block; }
-  .header-bottom:last-child {
-    margin-right: 0; }
-  .header-bottom hr {
-    margin: 0; }
-  .header-bottom .design {
-    background: url("../img/linea.svg");
-    background-repeat: repeat-x; }
+        margin-right: 20px; }
 
 article.teaser--top {
   float: left;
