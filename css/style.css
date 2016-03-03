@@ -562,7 +562,7 @@ picture {
     content: "";
     display: table; }
   .row-wrapper .outer-container {
-    max-width: 1260px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto; }
     .row-wrapper .outer-container::after {
@@ -573,11 +573,27 @@ picture {
 .pagewrap {
   position: absolute;
   top: 72px;
-  min-width: 1280px;
-  min-height: 675px;
-  background-image: url("../img/graph-paper.jpg");
+  min-width: 360px;
+  min-height: 65px;
+  background: url("../img/graph-paper.jpg");
   background-attachment: fixed;
   background-size: cover; }
+  @media screen and (max-width: 480px) {
+    .pagewrap {
+      margin-left: 17.14286%;
+      float: left;
+      display: block;
+      margin-right: 2.85714%;
+      width: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto; }
+      .pagewrap:last-child {
+        margin-right: 0; }
+      .pagewrap::after {
+        clear: both;
+        content: "";
+        display: table; } }
 
 #heady {
   float: left;
@@ -593,6 +609,21 @@ picture {
   box-shadow: inset 0 5px 15px -5px rgba(0, 0, 0, 0.45), inset 0 -5px 15px -5px rgba(0, 0, 0, 0.45); }
   #heady:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 550px) {
+    #heady nav {
+      display: none; }
+    #heady .menu-icon {
+      position: absolute;
+      top: 23px;
+      right: 20px;
+      height: 20px; }
+      #heady .menu-icon .line {
+        width: 28px;
+        height: 3px;
+        background: #1565c0;
+        margin-top: 3px; }
+        #heady .menu-icon .line:first-of-type {
+          margin: none; } }
   #heady #logo {
     height: 70px;
     width: 70px;
@@ -620,24 +651,23 @@ article.teaser--top {
   float: left;
   display: block;
   margin-right: 2.85714%;
-  width: 48.57143%;
-  margin-left: 25.71429%;
+  width: 74.28571%;
+  margin-left: 12.85714%;
   margin-top: 88px;
   margin-bottom: 79px;
   padding: 30px;
   border: 2px solid #ff9999;
   border-radius: 20px;
-  box-shadow: inset 0 0 24px 1px;
-  opacity: 0.9; }
+  box-shadow: inset 0 0 24px 1px; }
   article.teaser--top:last-child {
     margin-right: 0; }
   @media screen and (max-width: 480px) {
     article.teaser--top {
-      margin-left: 8.57143%;
+      margin-left: 4.28571%;
       float: left;
       display: block;
       margin-right: 2.85714%;
-      width: 82.85714%; }
+      width: 91.42857%; }
       article.teaser--top:last-child {
         margin-right: 0; } }
 
@@ -680,17 +710,62 @@ article.teaser--top {
   width: 82.85714%;
   padding: 48px 0px 45px 0px;
   margin-bottom: 25px;
-  background: rgba(255, 255, 255, 0.2);
   border-top: 4px solid #E3857D;
   bottom: 40px; }
   #subscribe:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    #subscribe {
+      margin-left: 4.28571%;
+      float: left;
+      display: block;
+      margin-right: 2.85714%;
+      width: 82.85714%;
+      margin: 0 10px 10px 10px; }
+      #subscribe:last-child {
+        margin-right: 0; } }
 
-#subscribe .note {
-  float: left;
-  margin-left: 80px; }
-#subscribe .follow {
-  float: right;
-  margin-right: 80px; }
+#subscribe {
+  display: flex; }
+  @media screen and (max-width: 480px) {
+    #subscribe {
+      margin-left: 0%;
+      float: left;
+      display: block;
+      margin-right: 2.85714%;
+      width: 100%;
+      padding: 8px 0px 45px 0px; }
+      #subscribe:last-child {
+        margin-right: 0; } }
+  #subscribe .note {
+    float: left;
+    margin: 0 80px; }
+    @media screen and (max-width: 480px) {
+      #subscribe .note {
+        margin-left: 8.57143%;
+        float: left;
+        display: block;
+        margin-right: 2.85714%;
+        width: 74.28571%;
+        padding: 0;
+        float: none;
+        text-align: center; }
+        #subscribe .note:last-child {
+          margin-right: 0; } }
+  #subscribe .follow {
+    float: right;
+    margin-right: 80px; }
+    @media screen and (max-width: 480px) {
+      #subscribe .follow {
+        margin-left: 4.28571%;
+        float: left;
+        display: block;
+        margin-right: 2.85714%;
+        width: 82.85714%;
+        display: flex;
+        float: none;
+        justify-content: space-around; }
+        #subscribe .follow:last-child {
+          margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
